@@ -1,0 +1,136 @@
+#page {
+  margin-top: 5%;
+  width: 100%;
+  font-family: 'Helvetica Neue';
+}
+
+/* Accordion */
+#accordion {
+  margin-bottom: 50vh;
+}
+
+#accordion h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.container-faq {
+  padding: 1em 2em;
+  border: 0.2em solid black;
+  border-radius: 2em;
+  width: 50%;
+  margin: 100px auto;
+}
+
+.container-faq > h3 {
+  color: #ff0000;
+}
+
+details {
+  border: 0.1em solid black;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 1em;
+}
+
+summary {
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* Dark Mode */
+
+#dark-mode {
+  margin-top: 10vh;
+  margin-bottom: 50vh;
+}
+
+#dark-mode > h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.container-dm {
+  position: relative;
+  border: 0.2em solid black;
+  max-width: 40em;
+  margin: 100px auto;
+}
+
+.body {
+  padding: 1em;
+}
+
+input,
+label {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  height: 1.8em;
+}
+
+label {
+  margin-top: 0.3em;
+  padding-right: 1.8em;
+  user-select: none;
+}
+
+.title {
+  margin: 0;
+}
+
+.darkOverride {
+  color: black;
+}
+
+#darkModeCheckbox:checked {
+  color: whitesmoke;
+}
+
+#darkModeCheckbox:checked ~ label {
+  color: whitesmoke;
+}
+
+.lightOverride {
+  color: whitesmoke;
+}
+
+#lightModeCheckbox:checked {
+  color: black;
+}
+
+#lightModeCheckbox:checked ~ label {
+  color: black;
+}
+
+@media (prefers-color-scheme: light) {
+  .lightOverride {
+    display: none;
+  }
+
+  .body {
+    background-color: white;
+    color: black;
+  }
+
+  #darkModeCheckbox:checked ~ .body {
+    background-color: darkslategrey;
+    color: whitesmoke;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .darkOverride {
+    display: none;
+  }
+
+  .body {
+    background-color: darkslategrey;
+    color: whitesmoke;
+  }
+
+  #lightModeCheckbox:checked ~ .body {
+    background-color: white;
+    color: black;
+  }
+}
